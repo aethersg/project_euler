@@ -11,12 +11,24 @@
 #
 
 
-def sum_square_difference():
-    r = range(1, 101)  # the range of the natural number
-    sum_of_square = sum([i ** 2 for i in r])
-    square_of_sum = sum(r) ** 2
-    return square_of_sum - sum_of_square
+def is_prime(p):
+    if p > 2:  # this will skip 2 as start from 3 as it will be neither a prime or composite
+        for i in range(2, int(p ** 0.5) + 1):
+            if p % i == 0:  # check if it is not a prime number
+                return False
+        return True
+
+
+def nth_prime():
+    no_of_prime = 0
+    prime = 1
+
+    while no_of_prime < 10000:
+        prime += 1
+        if is_prime(prime):
+            no_of_prime += 1
+    return prime
 
 
 if __name__ == "__main__":
-    print sum_square_difference()
+    print nth_prime()
