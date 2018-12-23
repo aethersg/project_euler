@@ -34,8 +34,8 @@ def largest_product():
     for i in range(0, len(s) - 13):
         p = 1
         for j in range(i, i + 13):
-            p *= int(s[j: j + 1])
-        if p > lp:
+            p *= int(s[j: j + 1])  # multiple all the value to get p
+        if p > lp:  # if p is greater then lp = p
             lp = p
     return lp
 
