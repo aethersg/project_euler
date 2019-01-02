@@ -211,7 +211,7 @@ def large_sum():
          '53503534226472524250874054075591789781264330331690']
 
     ans = [int(i) for i in s]
-    print str(sum(ans))[0:10]
+    return str(sum(ans))[0:10]
 
 
 if __name__ == "__main__":
