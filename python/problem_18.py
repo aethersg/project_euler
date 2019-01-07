@@ -1,5 +1,5 @@
 # coding=utf-8
-# Solution to problem 17
+# Solution to problem 18
 # Problem Statement: Maximum path sum I
 #
 # By starting at the top of the triangle below and moving to adjacent numbers on the row below,
