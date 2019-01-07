@@ -17,12 +17,27 @@
 
 
 def counting_sundays():
-    #       jan feb mar apr may jun jul aug sep oct nov dec
-    months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    week = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
-    leapyears = [year for year in range(1, 101) if year % 4 == 0]
+    # given 1,1,1901 ==> tues 6,1,1901 ==> sunday
+    ans = 0
+    start_date = [6, 1, 1901]
+    month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    while start_date[2] != 2001:
+        if start_date[2] % 4 == 0 and (start_date[2] % 100 != 0 or start_date[2] % 400 == 0):
+            month[1] = 29
+        else:
+            month[1] = 28
 
-    print leapyears
+        start_date[0] += 7
+
+        if start_date[0] > month[start_date[1] - 1]:
+            start_date[0] = start_date[0] - month[start_date[1] - 1]
+            start_date[1] += 1
+            if start_date[1] > 12:
+                start_date[1] = start_date[1] % 12
+                start_date[2] += 1
+        if start_date[0] == 1:
+            ans += 1
+    return ans
 
 
 if __name__ == "__main__":
