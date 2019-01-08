@@ -12,6 +12,21 @@
 #
 
 
+def all_perms(elements):
+    if len(elements) <= 1:
+        yield elements
+    else:
+        for perm in all_perms(elements[1:]):
+            for i in range(len(elements)):
+                # nb elements[0:1] works in both string and list contexts
+                yield perm[:i] + elements[0:1] + perm[i:]
+
+
+def lexicographic_perm(n):
+    p = all_perms(n)
+    p = sorted(p)
+    return p[999999]
+
 
 if __name__ == "__main__":
-    print (28123)
+    print lexicographic_perm("0123456789")
