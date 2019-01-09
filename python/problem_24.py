@@ -1,5 +1,5 @@
 # coding=utf-8
-# Solution to problem 22
+# Solution to problem 24
 # Problem Statement: Lexicographic permutations
 #
 # A permutation is an ordered arrangement of objects. For example,

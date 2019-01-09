@@ -1,5 +1,5 @@
 # coding=utf-8
-# Solution to problem 22
+# Solution to problem 23
 # Problem Statement: Non-abundant sums
 #
 # A perfect number is a number for which the sum of its proper divisors is exactly equal to the number.
