@@ -455,7 +455,7 @@ which produces 80 primes for the consecutive values 0 <= n <= 79.
 The product of the coefficients, −79 and 1601, is −126479.
 Considering quadratics of the form:
 
-n^2 + an + b, where |a| < 1000 and |b| \<= 1000
+n^2 + an + b, where |a| < 1000 and |b| <= 1000
 where |n| is the modulus/absolute value of n
 e.g. |11| = 11 and |-4| = 4
 
@@ -472,7 +472,8 @@ Starting with the number 1 and moving to the right in a clockwise direction a 5 
 21 22 23 24 25
 20  7  8  9 10
 19  6  1  2 11
-18  5  4  3 1217 16 15 14 13
+18  5  4  3 12
+17 16 15 14 13
 It can be verified that the sum of the numbers on the diagonals is 101.
 What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed in the same way?
 ```
