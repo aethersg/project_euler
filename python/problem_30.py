@@ -13,7 +13,19 @@
 
 
 def digit_powers(n):
+    ans = []
+    for i in range(2, 355000):
+        arr = []
+        no = i
+        while no > 0:
+            d = int(no % 10)
+            no /= 10
+            arr.append(d ** n)
+        if sum(arr) == i:
+            ans.append(i)
+    return ans
 
 
 if __name__ == "__main__":
-    print digit_powers(4)
+    ans = digit_powers(5)
+    print "The number are %s and the sum of that result is %s" % (ans, sum(ans))
