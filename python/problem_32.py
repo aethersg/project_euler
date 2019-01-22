@@ -13,15 +13,33 @@
 #
 
 
+def is_pandigital(n):
+    if len(n) > 9:
+        return False
+
+    for i in xrange(1, 10):
+        if str(i) not in n:
+            return False
+    return True
+
+
+def is_pandigital_product(x, y):
+    ans = str(x) + str(y) + str(x * y)
+    if len(ans) != 9:
+        return False
+    return is_pandigital(ans)
+
+
 def pandigital_products():
-    change = 200
-    coins = [1, 2, 5, 10, 20, 50, 100, 200]
-    ways = [0] * (change + 1)
-    ways[0] = 1
-    for i in range(len(coins)):
-        for j in range(coins[i], change + 1):
-            ways[j] += ways[j - coins[i]]
-    return max(ways)
+    products = []
+    for i in xrange(0, 100000):
+        for j in xrange(i, 100000):
+            if len(str(i * j) + str(i) + str(j)) > 9:
+                break
+            if is_pandigital_product(i, j):
+                products.append(i * j)
+                print("%i x %i = %i" % (i, j, i * j))
+    return sum(set(products))
 
 
 if __name__ == "__main__":
