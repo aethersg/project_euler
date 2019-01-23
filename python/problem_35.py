@@ -30,7 +30,7 @@ def is_circular_prime(p, n):
 
 
 def circular_prime(n):
-    c = 2
+    c = 0
     not_prime = ['0', '2', '4', '5', '6', '8']
     ps = [int(i) for i in prime_sieve(n)]
     for p in ps:
