@@ -8,6 +8,8 @@
 # How many circular primes are there below one million?
 #
 
+# TODO: need to optimize
+
 
 def prime_sieve(r):
     a = [True] * r
