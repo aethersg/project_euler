@@ -47,8 +47,10 @@ def truncatable_prime():
             ans.append(p)
         if len(ans) == 11:
             break
-    return sum(ans)
+    return ans
 
 
 if __name__ == "__main__":
-    print truncatable_prime()
+    ans=truncatable_prime()
+    print "This is the sum of the products: %s " % sum(ans)
+    print "This is the array: %s " % ans
