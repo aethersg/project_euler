@@ -9,7 +9,7 @@
 # D = |Pk − Pj| is minimised; what is the value of D?
 #
 #
-# 5482660
+#
 
 
 def is_pentagonal(n):
