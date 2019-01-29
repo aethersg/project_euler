@@ -17,11 +17,11 @@ def is_prime(p):  # reusing from problem 7
 
 
 def sum_of_primes(v):
-    ps = [] # array of primes
+    ps = []  # array of primes
     for i in range(2, v):
         if is_prime(i):
             ps.append(i)
-    return ps, sum(ps) # returns the array of primes and the sum of the array
+    return ps, sum(ps)  # returns the array of primes and the sum of the array
 
 
 if __name__ == "__main__":
