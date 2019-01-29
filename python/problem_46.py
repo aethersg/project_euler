@@ -1,7 +1,7 @@
 # coding=utf-8
 # Solution to problem 46
 # Problem Statement: Goldbach's other conjecture
-# ```
+#
 # It was proposed by Christian Goldbach that every odd composite number can be written as
 # the sum of a prime and twice a square.
 # 9 = 7 + 2×1^2
@@ -12,7 +12,7 @@
 # 33 = 31 + 2×1^2
 # It turns out that the conjecture was false.
 # What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?
-# ```
+#
 #
 
 
